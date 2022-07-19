@@ -66,4 +66,7 @@ public class Restaurant {
         return name;
     }
 
+    public int getOrderTotal(List<String> selectedItems) throws itemNotFoundException {
+        return 0;
+    }
 }
