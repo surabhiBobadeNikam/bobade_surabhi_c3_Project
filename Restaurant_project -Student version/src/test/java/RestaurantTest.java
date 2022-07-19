@@ -80,4 +80,10 @@ class RestaurantTest {
         selectedItems.add("some invalid item");
         assertThrows(itemNotFoundException.class,()-> restaurant.getOrderTotal(selectedItems));
     }
+
+    @Test
+    public void orderTotal_should_be_0_if_no_menu_items_selected() throws itemNotFoundException{
+        List<String> selectedItems = new ArrayList<>();
+        assertEquals(0, restaurant.getOrderTotal(selectedItems));
+    }
 }
